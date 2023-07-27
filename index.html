@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Burst</title>
 
+
     <!-- lato font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,11 +40,49 @@
         body {
             font-family: 'Lato', sans-serif;
         }
-        .input-icons{
+
+        .input-icons {
             position: relative;
         }
-        .input-icons i{
+
+        .input-icons i {
             position: absolute;
+        }
+
+        #slide1 {
+            background-image:
+                linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%),
+                url('./images/banner1.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+        }
+
+        #slide2 {
+            background-image:
+                linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%),
+                url('./images/banner2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+        }
+
+        #slide3 {
+            background-image:
+                linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%),
+                url('./images/banner3.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+        }
+
+        #slide4 {
+            background-image:
+                linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%),
+                url('./images/banner4.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
         }
     </style>
 
@@ -51,8 +90,8 @@
 
 <body>
     <header>
-
-        <nav class="lg:w-11/12 lg:m-auto">
+        <!-- navbar section -->
+        <nav class="w-11/12 m-auto">
             <div class="navbar lg:bg-fruit-primary lg:rounded-full my-5">
                 <div class="navbar-start hidden lg:block">
                     <ul class="menu menu-horizontal px-1 text-lg font-medium text-white">
@@ -87,16 +126,121 @@
                             <li><a>All fruits</a></li>
                         </ul>
                     </div>
-                    <div class="hidden lg:block input-icons">
+                    <div class="hidden lg:block input-icons mr-5">
                         <i class="fa-solid fa-magnifying-glass right-4 top-4"></i>
                         <input type="text" placeholder="Search"
                             class="input input-bordered w-24 md:w-auto rounded-3xl" />
                     </div>
-
-
                 </div>
             </div>
         </nav>
+
+        <!-- banner section -->
+        <div class="w-11/12 m-auto">
+            <div class="carousel w-full rounded-lg">
+                <div id="slide1" class="carousel-item relative w-full text-center">
+                    <div
+                        class="absolute flex justify-between transform -translate-y-1/2 lg:left-5 lg:right-5 top-1/2 flex justify-center items-center">
+                        <div>
+                            <a href="#slide4" class="btn btn-circle bg-zinc-950 opacity-50 text-white">❮</a>
+                        </div>
+                        <div class="space-y-5">
+                            <div>
+                                <h3 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h3>
+                            </div>
+                            <div>
+                                <p class="text-xl font-medium text-white">We supply highly quality organic products</p>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-fruit-primary text-white text-xl font-extrabold justify-center px-7 py-5 rounded-lg">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#slide2" class="btn btn-circle bg-zinc-950 opacity-50 text-white">❯</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="slide2" class="carousel-item relative w-full text-center">
+                    <!-- <img src="/images/banner2.png" class="w-full" /> -->
+                    <div
+                        class="absolute flex justify-between transform -translate-y-1/2 lg:left-5 lg:right-5 top-1/2 flex justify-center items-center">
+                        <div>
+                            <a href="#slide1" class="btn btn-circle bg-zinc-950 opacity-50 text-white">❮</a>
+                        </div>
+                        <div class="space-y-5">
+                            <div>
+                                <h3 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h3>
+                            </div>
+                            <div>
+                                <p class="text-xl font-medium text-white">We supply highly quality organic products</p>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-fruit-primary text-white text-xl font-extrabold justify-center px-7 py-5 rounded-lg">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#slide3" class="btn btn-circle bg-zinc-950 opacity-50 text-white">❯</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="slide3" class="carousel-item relative w-full text-center">
+                    <!-- <img src="/images/banner3.png" class="w-full" /> -->
+                    <div
+                        class="absolute flex justify-between transform -translate-y-1/2 lg:left-5 lg:right-5 top-1/2 flex justify-center items-center">
+                        <div>
+                            <a href="#slide2" class="btn btn-circle bg-zinc-950 opacity-50 text-white">❮</a>
+                        </div>
+                        <div class="space-y-5">
+                            <div>
+                                <h3 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h3>
+                            </div>
+                            <div>
+                                <p class="text-xl font-medium text-white">We supply highly quality organic products</p>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-fruit-primary text-white text-xl font-extrabold justify-center px-7 py-5 rounded-lg">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#slide4" class="btn btn-circle bg-zinc-950 opacity-50 text-white">❯</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full text-center">
+                    <!-- <img src="/images/banner4.png" class="w-full" /> -->
+                    <div
+                        class="absolute flex justify-between transform -translate-y-1/2 lg:left-5 lg:right-5 top-1/2 flex justify-center items-center">
+                        <div>
+                            <a href="#slide3" class="btn btn-circle bg-zinc-950 opacity-50 text-white">❮</a>
+                        </div>
+                        <div class="space-y-5">
+                            <div>
+                                <h3 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h3>
+                            </div>
+                            <div>
+                                <p class="text-xl font-medium text-white">We supply highly quality organic products</p>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-fruit-primary text-white text-xl font-extrabold justify-center px-7 py-5 rounded-lg">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#slide1" class="btn btn-circle bg-zinc-950 opacity-50 text-white">❯</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
