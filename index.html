@@ -6,14 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Burst</title>
 
+    <!-- lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
     <!-- daisy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/c356d473ea.js" crossorigin="anonymous"></script>
+    <!-- tailwind custom class -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'fruit-primary': '#F85559',
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        .input-icons{
+            position: relative;
+        }
+        .input-icons i{
+            position: absolute;
         }
     </style>
 
@@ -22,11 +52,27 @@
 <body>
     <header>
 
-        <nav>
-            <div class="navbar bg-rose-500 bg-opacity-80 rounded-full my-7">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <nav class="lg:w-11/12 lg:m-auto">
+            <div class="navbar lg:bg-fruit-primary lg:rounded-full my-5">
+                <div class="navbar-start hidden lg:block">
+                    <ul class="menu menu-horizontal px-1 text-lg font-medium text-white">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All fruits</a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar-center">
+                    <ul class="flex items-center gap-4">
+                        <li class="text-lg"><a><img src="images/logo.png" alt=""></a></li>
+                        <li class="text-4xl font-bold lg:text-white"><a>Fruit Burst</a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="dropdown lg:hidden">
+                        <label tabindex="0" class="btn btn-ghost ">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -34,28 +80,23 @@
                             </svg>
                         </label>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 2</a></li>
-                            <li><a>Item 3</a></li>
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box text-lg  ">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All fruits</a></li>
                         </ul>
                     </div>
-                    <!-- <a class="btn btn-ghost normal-case text-xl">daisyUI</a> -->
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                        <li><a>Item 3</a></li>
-                    </ul>
-                </div>
-                <div class="navbar-end">
-                    <a class="btn">Button</a>
+                    <div class="hidden lg:block input-icons">
+                        <i class="fa-solid fa-magnifying-glass right-4 top-4"></i>
+                        <input type="text" placeholder="Search"
+                            class="input input-bordered w-24 md:w-auto rounded-3xl" />
+                    </div>
+
+
                 </div>
             </div>
-
         </nav>
-
     </header>
 
     <main>
